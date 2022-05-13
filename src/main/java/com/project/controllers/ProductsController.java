@@ -22,11 +22,7 @@ public class ProductsController {
 
     @GetMapping("/ProductList/{brand}")
     public ModelAndView products(@PathVariable(value ="brand") Integer id, HttpServletRequest request) {
-
         List<Product> products = productsRepository.findProductByBrandId(id);
-
-        System.out.println("running method");
-//        request.setAttribute("products", products);
         return new ModelAndView("product-list");
     }
 
