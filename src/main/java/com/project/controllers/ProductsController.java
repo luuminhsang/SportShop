@@ -22,6 +22,7 @@ public class ProductsController {
 
     @GetMapping("/ProductList/{brand}")
     public ModelAndView products(@PathVariable(value ="brand") Integer id, HttpServletRequest request) {
+        System.out.println("add 1 line");
         List<Product> products = productsRepository.findProductByBrandId(id);
         return new ModelAndView("product-list");
     }
