@@ -16,7 +16,6 @@ public class Orders {
     @Temporal(TemporalType.DATE)
     @Column
     private Calendar orderDate;
-    @Column
     private long totalMoney;
     @Column(columnDefinition = "VARCHAR(255) CHARSET utf8")
     private String deliveryAddress;
@@ -26,7 +25,9 @@ public class Orders {
     @JoinColumn(name = "account_id")
     private Account account;
     @Temporal(TemporalType.DATE)
-    @Column
     private Calendar deliveryDate;
+
+
+
 
 }

@@ -14,7 +14,7 @@ public class Brand {
     private int id;
     @Column(name = "NAME", length = 30,nullable = false, unique = true)
     private String name;
-    @OneToMany(mappedBy = "brand",fetch = FetchType.LAZY,cascade=CascadeType.REMOVE)
+    @OneToMany(mappedBy = "brand")
     private Set<Product> listProduct;
 
 }

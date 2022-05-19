@@ -10,7 +10,7 @@ import java.util.Set;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "id")
     private int id;
     @OneToOne(mappedBy = "product")
     private ProductInfor productInfor;
@@ -26,7 +26,6 @@ public class Product {
     private int sold;
     @Column
     private int inStock;
-    @ManyToOne(cascade = CascadeType.DETACH,fetch = FetchType.LAZY)
-    @JoinColumn(name = "brand_id")
+    @ManyToOne
     private Brand brand;
 }
